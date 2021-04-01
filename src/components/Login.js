@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import 'tachyons'
 
 function Login({ isLoggedIn, setAuth }) {
@@ -7,6 +8,9 @@ function Login({ isLoggedIn, setAuth }) {
   const [password, setPassword] = useState('')
   const [errors, setErrors] = useState()
 
+  if (isLoggedIn) {
+    return <Redirect to="/" />
+  }
   function handleSubmit(event) {
     event.preventDefault()
     axios
