@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Login from './components/Login'
+import Register from './components/Register'
 import NoteList from './components/NoteList'
 import useLocalStorageState from 'use-local-storage-state'
 
