@@ -30,7 +30,6 @@ const NoteList = ({ isLoggedIn, token }) => {
           token={token}
           isLoggedIn={isLoggedIn}
           handleDone={(newNote) => {
-            debugger
             setIsCreating(false)
             setNotes([...notes, newNote])
           }}
